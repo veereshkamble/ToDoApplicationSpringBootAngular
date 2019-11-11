@@ -12,7 +12,7 @@ export class HardcodedAuthenticationService {
     if(username == "veereshkamble" && password == "password") {
       sessionStorage.setItem('authenticatedUser', username)
       //console.log('after ' + this.isUserLoggedIn())
-      console.log("authenticated user " + sessionStorage.getItem('authenticatedUser'))
+      console.log("authenticated user " + sessionStorage.getItem('authenticatedUser')) 
       return true;
     } 
     return false;
@@ -21,5 +21,9 @@ export class HardcodedAuthenticationService {
   isUserLoggedIn() {
     let user = sessionStorage.getItem('authenticatedUser')
     return !(user === null)
+  }
+
+  logout() {
+    sessionStorage.removeItem('authenticatedUser')
   }
 }
