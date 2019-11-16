@@ -3,3 +3,8 @@
 <div class="container">
     <h3>Welcome {{ name }}. You can manage your todos <a routerLink="/todos"> here </a> </h3>
 </div>
+
+<div class="container">
+    Click here to get a customized welcome message
+    <button (click)="getWelcomeMessage()" class="btn btn-success">Get welcome Message</button>
+</div>
