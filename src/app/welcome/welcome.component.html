@@ -9,6 +9,10 @@
     <button (click)="getWelcomeMessage()" class="btn btn-success">Get welcome Message</button>
 </div>
 
-<div class="container" *ngIf="welcomeMessageFromService">
+<div class="container" *ngIf="welcomeMessageFromService ">
     Your customized welcome message is {{ welcomeMessageFromService }}
 </div>
+
+<div class="alert alert-danger" *ngIf='errorMessageFromService'>
+    {{errorMessageFromService}}
+ </div>
