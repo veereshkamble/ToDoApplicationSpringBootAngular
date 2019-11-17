@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class WelcomeDataService {
 
   constructor(
-    private http:HttpClient
+    private http:HttpClient 
   ) { }
 
   executeHelloWorldBeanService() {
