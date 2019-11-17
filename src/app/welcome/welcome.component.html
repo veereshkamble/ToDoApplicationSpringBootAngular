@@ -8,3 +8,7 @@
     Click here to get a customized welcome message
     <button (click)="getWelcomeMessage()" class="btn btn-success">Get welcome Message</button>
 </div>
+
+<div class="container" *ngIf="welcomeMessageFromService">
+    Your customized welcome message is {{ welcomeMessageFromService }}
+</div>
