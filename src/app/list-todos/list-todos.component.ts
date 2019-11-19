@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoDataService } from '../service/data/todo-data.service';
 
 export class Todo {
 
@@ -19,22 +20,31 @@ export class Todo {
 })
 export class ListTodosComponent implements OnInit {
 
-  todos = [
-    new Todo(1, 'Learn to play the Violin', false, new Date()),
-    new Todo(2, 'Learn AngularJS', false, new Date()),
-    new Todo(3, 'Learn SpringBoot', false, new Date()),
-    new Todo(4, 'Visit India', true, new Date())
-    /* {id: 1, description: 'Learn to play the Violin'},
-    {id: 2, description: 'Learn AngularJS'},
-    {id: 3, description: 'Learn SpringBoot'} */
-  ]
-  todo = {
-    id: 1,
-    description: 'Learn to play the Violin'
-  }
-  constructor() { }
+  todos = []
+  //   = [
+  //   new Todo(1, 'Learn to play the Violin', false, new Date()),
+  //   new Todo(2, 'Learn AngularJS', false, new Date()),
+  //   new Todo(3, 'Learn SpringBoot', false, new Date()),
+  //   new Todo(4, 'Visit India', true, new Date())
+  //   /* {id: 1, description: 'Learn to play the Violin'},
+  //   {id: 2, description: 'Learn AngularJS'},
+  //   {id: 3, description: 'Learn SpringBoot'} */
+  // ]
+  // todo = {
+  //   id: 1,
+  //   description: 'Learn to play the Violin'
+  // }
+  constructor(
+    private todoService:TodoDataService
+  ) { }
 
   ngOnInit() {
+    this.todoService.retrieveAllTodos('veereshkamble').subscribe(
+      response => {
+        console.log(response)
+        this.todos = response;
+      }
+    )
   }
 
 }
