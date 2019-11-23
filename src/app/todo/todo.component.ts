@@ -31,7 +31,7 @@ export class TodoComponent implements OnInit {
     this.todoService.updateTodo("veereshkamble", this.id, this.todo).subscribe(
       data => {
         console.log(data)
-        this.router.navigate['todos']
+        this.router.navigate(['todos'])
       }
     )
   }
