@@ -71,4 +71,8 @@ export class ListTodosComponent implements OnInit {
     this.router.navigate(['todos',id])
   }
 
+  addTodo() {
+    console.log("in  addTodo()")
+    this.router.navigate(['todos',-1])
+  }
 }
