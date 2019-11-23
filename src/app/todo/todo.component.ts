@@ -26,4 +26,11 @@ export class TodoComponent implements OnInit {
     )
   }
 
+  saveTodo() {
+    this.todoService.updateTodo("veereshkamble", this.id, this.todo).subscribe(
+      data => {
+        console.log(data)
+      }
+    )
+  }
 }
