@@ -39,7 +39,7 @@ export class WelcomeComponent implements OnInit {
   }
 
   getWelcomeMessageWithPathVariable() {
-    console.log("get welcome message called")
+    console.log("get welcome message with path variable called")
     console.log(this.service.executeHelloWorldBeanService())
 
     this.service.executeHelloWorldBeanServiceWithPathVariable(this.name).subscribe(
