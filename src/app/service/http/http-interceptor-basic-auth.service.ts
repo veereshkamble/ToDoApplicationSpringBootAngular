@@ -18,5 +18,7 @@ export class HttpInterceptorBasicAuthService implements HttpInterceptor {
         Authorization : basicAuthHeaderString
       }
     })
+
+    return next.handle(request);
   }
 }
