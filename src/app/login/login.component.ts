@@ -22,7 +22,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  handleLogin() {
+  handleBasicAuthLogin() {
+    console.log('In handleBasicAuthLogin()')
     // console.log('Username: ' + this.username);
     // alert('Hello, ' + this.username);
 
@@ -40,7 +41,8 @@ export class LoginComponent implements OnInit {
     )
   }
 
-  handleBasicAuthLogin() {
+  handleLogin() {
+    console.log('In handleLogin')
     // console.log('Username: ' + this.username);
     // alert('Hello, ' + this.username);
 
